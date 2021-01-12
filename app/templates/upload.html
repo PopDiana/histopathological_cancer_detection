@@ -1,0 +1,72 @@
+<html>
+<head>
+    <title>
+        Histopathologic Cancer Detection
+    </title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/static/css/upload.css"/>
+</head>
+
+<body>
+<div class="container py-5" id="container">
+
+    <header class="text-white text-center">
+        <h1 class="display-4"><b>Histopathologic Cancer Detection</b></h1>
+        <p class="lead mb-0">An app for predicting the existence of metastasis in digital pathology scans</p>
+        <p class="text-white text-center template-from">Upload an image to get an accurate prediction or <a href="#" id="use-example" class="text-white"><u>try using an example</u></a></p>
+    </header>
+
+
+    <div class="row py-4">
+        <div class="col-lg-6 mx-auto">
+
+            <!-- Upload image input-->
+            <form id="upload-file" method="post" enctype="multipart/form-data">
+                <div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm">
+                    <input id="upload" type="file" onchange="readURL(this);" class="form-control border-0">
+                    <label id="upload-label" for="upload" class="font-weight-light text-muted">Choose file</label>
+                    <div class="input-group-append">
+                        <label for="upload" class="btn btn-light m-0 rounded-pill px-4"> <i class="fa fa-cloud-upload mr-2 text-muted"></i><small class="text-uppercase font-weight-bold text-muted">Choose file</small></label>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Uploaded image area-->
+            <p class="mb-5 font-weight-light text-white text-center template-from font-italic">
+                Formats supported: APNG, BMP, GIF, ICO, JPG/JPEG, PNG, SVG, WebP
+            </p>
+
+            <div class="image-area mt-4 col-lg-8 mx-auto" id="image-area"><img id="imageResult" src="#" alt="" class="img-fluid rounded shadow-sm mx-auto d-block" style="min-width:80%"></div>
+
+        </div>
+    </div>
+
+    <div class="row py-4" id="result-row">
+        <div class="col-lg-6 mx-auto">
+            <h3  id="result" class="mb-5 result text-white text-center template-from">
+            </h3>
+        </div>
+    </div>
+</div>
+<script src="/static/js/jquery-3.5.1.min.js"></script>
+<script src="/static/js/bootstrap.bundle.min.js"></script>
+<script src="/static/js/upload.js"></script>
+
+<footer class="text-white text-center">
+    <p class="mb-5 font-weight-light template-from"> @2020 -
+        <a href="https://bitbucket.org/pop-diana/proiect-licenta-2020/src/" class="text-white">
+            <b>Application for Histopathologic Cancer Detection</b>
+        </a>by Diana Pop
+    </p>
+    <p class="mb-5 font-weight-light template-from">
+        Template from
+        <a href="https://bootstrapious.com/p/bootstrap-image-upload" class="text-white">
+            <b>Bootstrapious</b>
+        </a>
+    </p>
+</footer>
+</body>
+</html>
+
+
